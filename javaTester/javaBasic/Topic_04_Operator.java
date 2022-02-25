@@ -30,6 +30,20 @@ public class Topic_04_Operator {
 		for (int i = 0; i <= 3; i++) {
 			System.out.println(i);
 		}	
+		
+		String address = "HCM";
+		
+		if (address != "HN" && address != "DN") {
+			System.out.println("Address is not the same");
+		}
+		
+		if (!(address == "HN")) {
+			System.out.println("Address is not the same");
+		}
+		
+		//Tam nguyên: có 3 dấu = ? :
+		boolean status = (address == "HN")? true : false;
+		System.out.println(status);
 	}
 
 }
