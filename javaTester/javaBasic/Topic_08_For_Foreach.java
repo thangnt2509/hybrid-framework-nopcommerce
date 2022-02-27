@@ -144,7 +144,7 @@ public class Topic_08_For_Foreach {
 		//Java Generic
 		List<WebElement> links = driver.findElements(By.xpath(""));
 		
-		//Xử lý dữ liệu / get text/ value/ css/ aatribute
+		//Xử lý dữ liệu / get text/ value/ css/ attribute
 		for (WebElement link : links) {
 			//Chuyển page
 			//Refresh DOM/ HTML
