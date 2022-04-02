@@ -3,7 +3,6 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.HomePageUI;
 import pageUIs.RegisterPageUI;
 
 public class RegisterPageObject extends BasePage {
@@ -55,6 +54,12 @@ public class RegisterPageObject extends BasePage {
 		waitForElementVisible(driver, RegisterPageUI.LAST_NAME_TEXTBOX);
 		sendkeyToElement(driver, RegisterPageUI.LAST_NAME_TEXTBOX, lastName);
 
+	}
+
+	public void loginToSystem(String username, String password) {
+		inputToFirstnameTextbox(username);
+		inputToPasswordTextbox(password);
+		clickToRegisterButton();
 	}
 
 	public void inputToEmailTextbox(String emailAddress) {
