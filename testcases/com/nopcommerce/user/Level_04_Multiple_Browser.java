@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopCommerce.HomePageObject;
+import pageObjects.nopCommerce.RegisterPageObject;
 
 public class Level_04_Multiple_Browser extends BaseTest {
 	// Extends rồi không cần khai báo, không cần khởi tạo, ko cần thông qua đối tượng/instance

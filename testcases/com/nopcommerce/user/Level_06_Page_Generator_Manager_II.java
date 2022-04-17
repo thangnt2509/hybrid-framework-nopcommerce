@@ -17,7 +17,7 @@ import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
 import pageObjects.nopCommerce.RegisterPageObject;
 
-public class Level_06_Page_Generator_Manager_I extends BaseTest {
+public class Level_06_Page_Generator_Manager_II extends BaseTest {
 	private WebDriver driver;
 	private String firstName, lastName, invalidEmail, notFoundEmail, existingEmail, validPassword, incorrectPassword;
 
@@ -31,11 +31,6 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 
-		// Không bị lỗi nullPointer, khởi tạo ở từng TC
-		// Nhược điểm: Không đảm bảo được tính encapsulation (Tính đóng gói của OOP)
-
-		// 1
-
 		firstName = "Automation";
 		lastName = "FC";
 		invalidEmail = "afc@afc.com@vn";
@@ -45,12 +40,8 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		incorrectPassword = "654321";
 
 		System.out.println("Pre-condition - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
-
-		// Click register link -> nhảy qua trang Register
-		// 2
-		registerPage = new RegisterPageObject(driver);
-
+		registerPage = homePage.clickToRegisterLink();
+		
 		System.out.println("Pre-condition - Step 02: Input valid data");
 		registerPage.inputToFirstnameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
@@ -65,21 +56,13 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
 		System.out.println("Pre-condition - Step 05: Click to Logout link");
-		registerPage.clickToLogoutLink();
-
-		// Click logout thì business nó sẽ quay về trang HomePage
-		// 3
-		homePage = new HomePageObject(driver);
+		homePage = registerPage.clickToLogoutLink();
 	}
 
 	@Test
 	public void Login_01_Empty_Data() {
 		System.out.println("Login_01_Empty_Data - Step 01: Click to Login button");
-		homePage.clickToLoginButton();
-
-		// Từ trang Home > Click login link > Sang trang Login
-		// 4
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginButton();
 
 		System.out.println("Login_01_Empty_Data - Step 02: Click to Login button");
 		loginPage.clickToLoginButton();
@@ -90,13 +73,9 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
 	@Test
 	public void Login_02_Invalid_Email() {
-		homePage.clickToLoginButton();
-
-		// 5
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginButton();
 
 		loginPage.inputToEmailTextbox(invalidEmail);
-
 		loginPage.clickToLoginButton();
 
 		Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Wrong email");
@@ -105,27 +84,21 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
 	@Test
 	public void Login_03_Email_Not_Found() {
-		homePage.clickToLoginButton();
-		// 6
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginButton();
 
 		loginPage.inputToEmailTextbox(notFoundEmail);
-
 		loginPage.clickToLoginButton();
-
+		
 		Assert.assertEquals(loginPage.getErrorMessageUnsuccessful(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
 
 	}
 
 	@Test
 	public void Login_04_Existing_Email_Empty_Password() {
-		homePage.clickToLoginButton();
-		// 7
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginButton();
 
 		loginPage.inputToEmailTextbox(existingEmail);
 		loginPage.inputToPasswordTextbox("");
-
 		loginPage.clickToLoginButton();
 
 		Assert.assertEquals(loginPage.getErrorMessageUnsuccessful(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
@@ -134,37 +107,27 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
 	@Test
 	public void Login_05_Existing_Email_Incorrect_Password() {
-		homePage.clickToLoginButton();
-		// 8
-		loginPage = new LoginPageObject(driver);
-
+		loginPage = homePage.clickToLoginButton();
+		
 		loginPage.inputToEmailTextbox(existingEmail);
 		loginPage.inputToPasswordTextbox(incorrectPassword);
 
 		loginPage.clickToLoginButton();
-
 		Assert.assertEquals(loginPage.getErrorMessageUnsuccessful(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
 	}
 
 	@Test
 	public void Login_06_Valid_Email_Password() {
-		homePage.clickToLoginButton();
-		// 9
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginButton();
 
 		loginPage.inputToEmailTextbox(existingEmail);
 		loginPage.inputToPasswordTextbox(validPassword);
-
-		loginPage.clickToLoginButton();
-
-		// Login thành công > Về trang homepage
-		// 10
-		homePage = new HomePageObject(driver);
-
+		homePage = loginPage.clickToLoginButton();
+		
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 	}
 
-	@AfterClass // Customer close browser/ driver
+	@AfterClass 
 	public void afterClass() {
 		driver.quit();
 	}

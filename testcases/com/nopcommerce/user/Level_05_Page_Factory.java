@@ -12,9 +12,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageFactory.HomePageObjectF;
-import pageFactory.LoginPageObjectF;
-import pageFactory.RegisterPageObjectF;
+import pageFactory.nopCommerce.HomePageObjectF;
+import pageFactory.nopCommerce.LoginPageObjectF;
+import pageFactory.nopCommerce.RegisterPageObjectF;
 
 public class Level_05_Page_Factory extends BaseTest {
 	private WebDriver driver;
