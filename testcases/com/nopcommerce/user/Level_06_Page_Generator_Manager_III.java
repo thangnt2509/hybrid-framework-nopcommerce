@@ -22,6 +22,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	@BeforeClass // Multiple browsers
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
+		driver.get("https://demo.nopcommerce.com/");
 
 		homePage = PageGeneratorManager.getHomePage(driver);
 		
