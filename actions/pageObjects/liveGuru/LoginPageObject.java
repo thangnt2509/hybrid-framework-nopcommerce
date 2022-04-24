@@ -15,7 +15,8 @@ public class LoginPageObject extends BasePage{
 	public RegisterPageObject clickToCreateAccountButton() {
 		waitForElementClickable(driver, LoginPageUI.CREATE_ACCOUNT_BUTTON);
 		clickToElement(driver, LoginPageUI.CREATE_ACCOUNT_BUTTON);
-		return new RegisterPageObject(driver);
+		//return new RegisterPageObject(driver);
+		return PageGeneratorManager.getRegisterPage(driver);
 	}
 
 	public void inputToEmailTextbox(String email) {
@@ -33,7 +34,8 @@ public class LoginPageObject extends BasePage{
 	public MyDashboardPageObject clickToLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
-		return new MyDashboardPageObject(driver);
+		//return new MyDashboardPageObject(driver);
+		return PageGeneratorManager.getMyDashboardPage(driver);
 	}
 	
 

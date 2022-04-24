@@ -18,6 +18,6 @@ public class PageGeneratorManager {
 	public static MyDashboardPageObject getMyDashboardPage(WebDriver driver) {
 		return new MyDashboardPageObject(driver);
 	}
-
+	
 	
 }

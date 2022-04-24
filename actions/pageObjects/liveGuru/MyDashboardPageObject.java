@@ -30,7 +30,8 @@ public class MyDashboardPageObject extends BasePage {
 	public HomePageObject clickToLogoutLink() {
 		waitForElementClickable(driver, MyDashboardPageUI.LOGOUT_LINK);
 		clickToElement(driver, MyDashboardPageUI.LOGOUT_LINK);
-		return new HomePageObject(driver);
+		//return new HomePageObject(driver);
+		return PageGeneratorManager.getHomePage(driver);
 	}
 
 }

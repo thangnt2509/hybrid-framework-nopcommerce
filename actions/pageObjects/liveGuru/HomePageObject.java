@@ -16,7 +16,8 @@ public class HomePageObject extends BasePage {
 	public LoginPageObject clickToMyAccountLink() {
 		waitForElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
-		return new LoginPageObject(driver);
+		//return new LoginPageObject(driver);
+		return PageGeneratorManager.getLoginPage(driver);
 	}
 
 }
