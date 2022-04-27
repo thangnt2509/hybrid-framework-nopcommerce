@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_04_Multiple_Browser extends BaseTest {
 	// Extends rồi không cần khai báo, không cần khởi tạo, ko cần thông qua đối tượng/instance
@@ -25,15 +25,15 @@ public class Level_04_Multiple_Browser extends BaseTest {
 	private String firstName, lastName, emailAddress, password;
 
 	// Declare + Init
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
 
 	@Parameters("browser")
 	@BeforeClass // Multiple browsers
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		// registerPage = new RegisterPageObject(driverTestClass);
 
 		firstName = "Automation";

@@ -11,8 +11,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_03_Page_Object_01_Register {
 	// Extends rồi không cần khai báo, không cần khởi tạo, ko cần thông qua đối tượng/instance
@@ -21,8 +21,8 @@ public class Level_03_Page_Object_01_Register {
 	private String firstName, lastName, emailAddress, password;
 
 	// Declare + Init
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
 	private String projectPath = System.getProperty("user.dir");
 
 	@BeforeClass // Multiple browsers
@@ -38,14 +38,14 @@ public class Level_03_Page_Object_01_Register {
 		emailAddress = "afc" + generateFakeNumber() + "@gmail.vn";
 		password = "123456";
 
-		homePage = new HomePageObject(driver);
-		registerPage = new RegisterPageObject(driver);
+		homePage = new UserHomePageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 	}
 
 	@Test
 	public void Register_01_Empty_Data() {
 		System.out.println("Register_01 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register_01 - Step 02: Click to Register link");
 		registerPage.clickToRegisterButton();
@@ -63,7 +63,7 @@ public class Level_03_Page_Object_01_Register {
 	@Test
 	public void Register_02_Invalid_Email() {
 		System.out.println("Register_02 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register_02 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -83,7 +83,7 @@ public class Level_03_Page_Object_01_Register {
 	@Test
 	public void Register_03_Success() {
 		System.out.println("Home Page - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register_03 - Step 02: Input valid data");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -106,7 +106,7 @@ public class Level_03_Page_Object_01_Register {
 	@Test
 	public void Register_04_Existing_Email() {
 		System.out.println("Register_04 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register_04 - Step 02: Input existing email");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -125,7 +125,7 @@ public class Level_03_Page_Object_01_Register {
 	@Test
 	public void Register_05_Password_Less_Than_6_Chars() {
 		System.out.println("Register_05 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register_05 - Step 02: Input password less than 6 characters");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -145,7 +145,7 @@ public class Level_03_Page_Object_01_Register {
 	@Test
 	public void Register_06_Invalid_Confirm_Password() {
 		System.out.println("Register_06 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register_06 - Step 02: Input confirm password different from password");
 		registerPage.inputToFirstnameTextbox(firstName);

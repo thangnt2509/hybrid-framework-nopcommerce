@@ -1,4 +1,4 @@
-package pageUIs.nopCommerce;
+package pageUIs.nopCommerce.user;
 
 public class HomePageUI {
 	// Biến static cho phép truy cập trực tiếp từ tên class và có thể chia sẻ dữ liệu giữa nhiều luồng (thread) khác nhau -> Parallel testing

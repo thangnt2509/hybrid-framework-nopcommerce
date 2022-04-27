@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import commons.BasePageFactory;
-import pageUIs.nopCommerce.LoginPageUI;
+import pageUIs.nopCommerce.user.LoginPageUI;
 
 public class LoginPageObjectF extends BasePageFactory {
 	private WebDriver driver;
