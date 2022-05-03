@@ -638,6 +638,11 @@ public class BasePage {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locatorType)));
 	}
+	
+	protected void waitForElementInvisible(WebDriver driver, String locatorType, String... dynamicValues) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(getDynacmicXpath(locatorType, dynamicValues))));
+	}
 
 //	protected void waitForAllElementsInvisible(WebDriver driver, String xpathLocator) {
 //		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
