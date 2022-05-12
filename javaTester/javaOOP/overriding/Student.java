@@ -18,9 +18,4 @@ public class Student extends Person implements IWork {
 		
 	}
 	
-
-	public void run() {
-		System.out.println("Làm 8h/ ngày");
-		
-	}
 }
