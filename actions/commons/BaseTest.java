@@ -10,6 +10,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import exception.BrowserNotSupport;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
@@ -55,7 +56,8 @@ public class BaseTest {
 			options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
 			driver = new ChromeDriver(options);
 		} else {
-			throw new RuntimeException("Browser name invalid");
+			//throw new RuntimeException("Browser name invalid");
+			throw new BrowserNotSupport(browserName);
 		}
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		//driver.get("https://demo.nopcommerce.com/");
