@@ -53,13 +53,20 @@ public class BaseTest {
 			// ChromeDriver cho CocCoc
 			WebDriverManager.chromedriver().driverVersion("98.0.4758.80").setup();
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			
+			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
+				options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			}else {
+				options.setBinary("...");			
+			}
+			
 			driver = new ChromeDriver(options);
 		} else {
 			//throw new RuntimeException("Browser name invalid");
 			throw new BrowserNotSupport(browserName);
 		}
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		//driver.get("https://demo.nopcommerce.com/");
 		return driver;
 	}
