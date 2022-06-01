@@ -1,4 +1,4 @@
-package pageObject.jQuery;
+package pageObject.jQuery.dataTable;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -11,11 +11,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import commons.BasePage;
-import pageUI.jQuery.HomePageUI;
+import pageUI.jQuery.dataTable.HomePageUI;
 
-public class HomePageObject extends BasePage{
+public class HomePageObject extends BasePage {
 	WebDriver driver;
-	
+
 	public HomePageObject(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -23,7 +23,7 @@ public class HomePageObject extends BasePage{
 	public void openPagingByPageNumber(String pageNumber) {
 		waitForElementClickable(driver, HomePageUI.PAGINATION_PAGE_BY_NUMBER, pageNumber);
 		clickToElement(driver, HomePageUI.PAGINATION_PAGE_BY_NUMBER, pageNumber);
-		
+
 	}
 
 	public void enterToHeaderTextboxByLabel(String headerLabel, String value) {
@@ -40,58 +40,58 @@ public class HomePageObject extends BasePage{
 	public List getValueEachRowAtAllPage() {
 		int totalPage = getElementSize(driver, HomePageUI.TOTAL_PAGINATION);
 		System.out.println("Total size = " + totalPage);
-		
+
 		List<String> allRowValueAllPage = new ArrayList<String>();
-		
-		//Set chỉ lưu vào giá trị không trùng nhau
+
+		// Set chỉ lưu vào giá trị không trùng nhau
 		Set<String> allRowValueUniqueAllPage = new HashSet<String>();
-		
-		//Duyệt qua tất cả các page number (paging)
- 		for (int index = 1; index <= totalPage; index++) {
+
+		// Duyệt qua tất cả các page number (paging)
+		for (int index = 1; index <= totalPage; index++) {
 			clickToElement(driver, HomePageUI.PAGINATION_PAGE_BY_INDEX, String.valueOf(index));
-//			sleepInSecond(1);
-			
-			//Get text của all row mỗi page đưa vào ArrayList
-//			List<WebElement> allRowElementEachPage = getListElements(driver, HomePageUI.ALL_ROW_EACH_PAGE);
+			// sleepInSecond(1);
+
+			// Get text của all row mỗi page đưa vào ArrayList
+			// List<WebElement> allRowElementEachPage = getListElements(driver, HomePageUI.ALL_ROW_EACH_PAGE);
 			List<WebElement> allRowElementEachPage = getListElements(driver, HomePageUI.ALL_ROW_COUNTRY_EACH_PAGE);
 			for (WebElement eachRow : allRowElementEachPage) {
 				allRowValueAllPage.add(eachRow.getText());
-				
+
 			}
 		}
- 		
- 		//In ra tất cả giá trị row ra - tất cả các page
- 		for (String value : allRowValueAllPage) {
-// 			System.out.println("-----------------------------");
+
+		// In ra tất cả giá trị row ra - tất cả các page
+		for (String value : allRowValueAllPage) {
+			// System.out.println("-----------------------------");
 			System.out.println(value);
 		}
- 		
+
 		return allRowValueAllPage;
 	}
 
-	public void enterToTextboxByColumnNameAtRowNumber(String columnName, String rowNumber, String valueToEnter){
-		//Column index dựa vào tên cột
+	public void enterToTextboxByColumnNameAtRowNumber(String columnName, String rowNumber, String valueToEnter) {
+		// Column index dựa vào tên cột
 		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
-		
-		//Sendkey vào dòng nào
+
+		// Sendkey vào dòng nào
 		waitForElementVisible(driver, HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
 		sendkeyToElement(driver, HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, valueToEnter, rowNumber, String.valueOf(columnIndex));
-		
+
 	}
 
 	public void selectDropdownByColumnNameAtRowNumber(String columnName, String rowNumber, String valueToSelect) {
 		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
-		
-		//Sendkey vào dòng nào
+
+		// Sendkey vào dòng nào
 		waitForElementClickable(driver, HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
 		selectItemInDefaultDropdown(driver, HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, valueToSelect, rowNumber, String.valueOf(columnIndex));
-		
+
 	}
 
 	public void clickToLoadButton() {
 		waitForElementClickable(driver, HomePageUI.LOAD_BUTTON);
 		clickToElement(driver, HomePageUI.LOAD_BUTTON);
-		
+
 	}
 
 	public void checkToCheckboxByColumnNameAtRowNumber(String columnName, String rowNumber) {
@@ -111,16 +111,4 @@ public class HomePageObject extends BasePage{
 		clickToElement(driver, HomePageUI.ICON_NAME_BY_ROW_NUMBER, rowNumber, iconName);
 	}
 
-
-		
-
 }
-
-
-
-
-
-
-
-
-

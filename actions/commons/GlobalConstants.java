@@ -7,29 +7,27 @@ public class GlobalConstants {
 	public static final String ADMIN_PAGE_URL = "https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F";
 	public static final String PROJECT_PATH = System.getProperty("user.dir");
 	public static final String OS_NAME = System.getProperty("os.name");
-	
-	//Windows/ MAC/ Linux
-	//File.separator: Tự detect trái hay phải (/ hay \)
-	public static final String UPLOAD_FILE = PROJECT_PATH + File.separator + "uploadFiles";
-	//Trỏ về 1 thư mục mặc định của User
-	//Window: Downloads
+
+	// Windows/ MAC/ Linux
+	// File.separator: Tự detect trái hay phải (/ hay \)
+	public static final String UPLOAD_FILE = PROJECT_PATH + File.separator + "uploadFiles" + File.separator;
+	// Trỏ về 1 thư mục mặc định của User
+	// Window: Downloads
 	public static final String DOWNLOAD_FILE = PROJECT_PATH + File.separator + "downloadFiles";
 	public static final String BROWSER_LOG = PROJECT_PATH + File.separator + "browserLogs";
 	public static final String DRAG_DROP_HTML5 = PROJECT_PATH + File.separator + "dragDropHTML5";
-	
-	//Database account/ user/ pas/ port
-	public static final String DB_DEV_URL = "192.168.1.15:9860";//32.18.252.185:9860
+
+	// Database account/ user/ pas/ port
+	public static final String DB_DEV_URL = "192.168.1.15:9860";// 32.18.252.185:9860
 	public static final String DB_DEV_USER = "automationfc";
 	public static final String DB_DEV_PASS = "P@ssw0rld1";
-	
-	public static final String DB_TEST_URL = "192.168.1.15:9860";//32.18.252.185:9860
+
+	public static final String DB_TEST_URL = "192.168.1.15:9860";// 32.18.252.185:9860
 	public static final String DB_TEST_USER = "automationfc";
 	public static final String DB_TEST_PASS = "P@ssw0rld1";
-	
+
 	public static final long SHORT_TIMEOUT = 5;
 	public static final long LONG_TIMEOUT = 10;
 	public static final long RETRY_TEST_FAIL = 3;
-	
-	
-	
+
 }

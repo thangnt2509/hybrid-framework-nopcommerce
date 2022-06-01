@@ -1,4 +1,4 @@
-package com.jquery.datatable;
+package com.jquery;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
-import pageObject.jQuery.HomePageObject;
+import pageObject.jQuery.dataTable.HomePageObject;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
@@ -32,7 +32,7 @@ public class Topic_10_DataTable_DataGrid extends BaseTest {
 		driver = getBrowserDriver(browserName, appUrl);
 		driver.get(appUrl);
 
-		homePage = pageObject.jQuery.PageGeneratorManager.getHomePage(driver);
+		homePage = pageObject.jQuery.dataTable.PageGeneratorManager.getHomePage(driver);
 		
 	}
 
