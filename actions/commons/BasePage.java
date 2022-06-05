@@ -1,16 +1,20 @@
 package commons;
 
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.internal.FindsByClassName;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -474,13 +478,51 @@ public class BasePage {
 	// return getWebElement(driver, xpathLocator).isDisplayed();
 	// }
 	public boolean isElementDisplayed(WebDriver driver, String locatorType) {
-		return getWebElement(driver, locatorType).isDisplayed();
+		try {
+			//Tìm thấy element: 
+			//Case 1: Displayed - trả về True
+			//Case 2: Undisplayed - trả về false
+			return getWebElement(driver, locatorType).isDisplayed();
+		} catch (NoSuchElementException e) {
+			//Case 3: Undisplayed - trả về false
+			return false;
+		}
 	}
-
+	
+	//Case 2 + 3
+	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+//		System.out.println("Start time = " + new Date().toString());
+		
+		overrideImplicitTimeout(driver, shortTimeout);
+		List<WebElement> elements = getListElements(driver, locator);
+		
+		//Sau khi tìm xong thì gán lại wait = 30 để các step khác (findElement/ findElements) không bị ảnh hưởng
+		overrideImplicitTimeout(driver, longTimeout);
+		
+		if (elements.size() == 0) {
+//			System.out.println("Case 3 - Element not in DOM");
+//			System.out.println("End time = " + new Date().toString());
+			return true;
+			//Nó có kích thước = 1 (có trong DOM)
+			//Không được hiển thị
+		}else if(elements.size() > 0 && !elements.get(0).isDisplayed()) {
+//			System.out.println("Case 2 - Element in DOM but not visible/ displayed");
+//			System.out.println("End time = " + new Date().toString());
+			return true;
+		}else{
+//			System.out.println("Case 1 - Element in DOM and visible");
+			return false;
+		}
+	}
+	
 	public boolean isElementDisplayed(WebDriver driver, String locatorType, String... dynamicValues) {
 		return getWebElement(driver, getDynacmicXpath(locatorType, dynamicValues)).isDisplayed();
 	}
 
+	public void overrideImplicitTimeout(WebDriver driver, long timeOut) {
+		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+	}
+	
 	// public boolean isElementEnabled(WebDriver driver, String xpathLocator) {
 	// return getWebElement(driver, xpathLocator).isEnabled();
 	// }
@@ -682,6 +724,15 @@ public class BasePage {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locatorType)));
 	}
+	/*
+	 * Wait for element undisplayed in DOM or not in DOM and override 
+	 */
+	public void waitForElementUndisplayed(WebDriver driver, String locatorType) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, shortTimeout);
+		overrideImplicitTimeout(driver, shortTimeout);
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locatorType)));
+		overrideImplicitTimeout(driver, longTimeout);
+	}
 
 	public void waitForElementInvisible(WebDriver driver, String locatorType, String... dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
@@ -789,6 +840,6 @@ public class BasePage {
 	}
 
 	public long longTimeout = GlobalConstants.LONG_TIMEOUT;
-	// public long shortTimeout = 5;
+	public long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 
 }
