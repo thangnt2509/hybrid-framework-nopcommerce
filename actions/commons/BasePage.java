@@ -153,7 +153,7 @@ public class BasePage {
 	// locatorType: Id=/ Css=/ Xpath=/ Name=/ CLASS=
 	public By getByLocator(String locatorType) {
 		By by = null;
-		System.out.println("Locator type = " + locatorType);
+//		System.out.println("Locator type = " + locatorType);
 		if (locatorType.startsWith("id=") || locatorType.startsWith("ID=") || locatorType.startsWith("Id=")) {
 			by = By.id(locatorType.substring(3));
 		} else if (locatorType.startsWith("class=") || locatorType.startsWith("CLASS=") || locatorType.startsWith("Class=")) {
