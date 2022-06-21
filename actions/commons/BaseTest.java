@@ -20,7 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 	private WebDriver driver;
 	protected final Log log;
-	
+
 	protected BaseTest() {
 		log = LogFactory.getLog(getClass());
 	}
@@ -61,24 +61,24 @@ public class BaseTest {
 			// ChromeDriver cho CocCoc
 			WebDriverManager.chromedriver().driverVersion("98.0.4758.80").setup();
 			ChromeOptions options = new ChromeOptions();
-			
+
 			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
 				options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
-			}else {
-				options.setBinary("...");			
+			} else {
+				options.setBinary("...");
 			}
-			
+
 			driver = new ChromeDriver(options);
 		} else {
-			//throw new RuntimeException("Browser name invalid");
+			// throw new RuntimeException("Browser name invalid");
 			throw new BrowserNotSupport(browserName);
 		}
-//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		//driver.get("https://demo.nopcommerce.com/");
+		// driver.get("https://demo.nopcommerce.com/");
 		return driver;
 	}
-	
+
 	protected WebDriver getBrowserDriver(String browserName, String appUrl) {
 		if (browserName.equals("firefox")) {
 			// System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
@@ -115,22 +115,26 @@ public class BaseTest {
 			// ChromeDriver cho CocCoc
 			WebDriverManager.chromedriver().driverVersion("98.0.4758.80").setup();
 			ChromeOptions options = new ChromeOptions();
-			
+
 			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
 				options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
-			}else {
-				options.setBinary("...");			
+			} else {
+				options.setBinary("...");
 			}
-			
+
 			driver = new ChromeDriver(options);
 		} else {
-			//throw new RuntimeException("Browser name invalid");
+			// throw new RuntimeException("Browser name invalid");
 			throw new BrowserNotSupport(browserName);
 		}
-//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driver.get(appUrl);
 		return driver;
+	}
+
+	public WebDriver getDriverInstance() {
+		return this.driver;
 	}
 
 	public int generateFakeNumber() {
@@ -138,7 +142,7 @@ public class BaseTest {
 		return rand.nextInt(9999);// Break
 
 	}
-	
+
 	protected boolean verifyTrue(boolean condition) {
 		boolean pass = true;
 		try {
@@ -154,7 +158,6 @@ public class BaseTest {
 		return pass;
 	}
 
-
 	protected boolean verifyFalse(boolean condition) {
 		boolean pass = true;
 		try {
@@ -169,7 +172,6 @@ public class BaseTest {
 		return pass;
 	}
 
-
 	protected boolean verifyEquals(Object actual, Object expected) {
 		boolean pass = true;
 		try {
@@ -183,6 +185,5 @@ public class BaseTest {
 		}
 		return pass;
 	}
-
 
 }

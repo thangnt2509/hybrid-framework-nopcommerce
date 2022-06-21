@@ -122,3 +122,8 @@
 [2022-06-14 18:17:13,910] Register - Step 08: Verify register success message is displayed
 [2022-06-14 18:17:13,984]  -------------------------- PASSED -------------------------- 
 [2022-06-14 18:17:13,984] Register - Step 09: Click to Logout link
+[2022-06-21 20:39:19,329] Login - Step 01: Navigate to Login page
+[2022-06-21 20:39:21,568] Login - Step 01: Enter to email textbox with value is 'afc5565@gmail.vn'
+[2022-06-21 20:39:21,629] Login - Step 02: Enter to password textbox with value is '123456'
+[2022-06-21 20:39:21,686] Login - Step 03: Click to Login button
+[2022-06-21 20:39:22,239] Login - Step 04: Verify 'My Account' link is displayed

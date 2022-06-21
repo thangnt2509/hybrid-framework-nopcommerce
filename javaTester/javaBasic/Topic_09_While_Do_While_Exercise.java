@@ -125,7 +125,7 @@ public class Topic_09_While_Do_While_Exercise {
 		System.out.println(i);
 	}
 
-	@Test
+	// @Test
 	public void TC_06_Ex5() {
 		System.out.println("Nhập vào một số");
 		int numberA = scanner.nextInt();
@@ -136,5 +136,16 @@ public class Topic_09_While_Do_While_Exercise {
 			i++;
 		}
 		System.out.println(result);
+	}
+
+	@Test
+	public void TC_07_Ex5() {
+		int numberA;
+		do {
+			System.out.println("Nhập vào một số: ");
+			numberA = scanner.nextInt();
+			System.out.println("Số vừa nhập là " + numberA);
+		} while (numberA != 0);
+		System.out.println("Kết thúc");
 	}
 }
