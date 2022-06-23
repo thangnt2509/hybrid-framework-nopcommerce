@@ -1,0 +1,9 @@
+[2022-06-24 02:13:09,464] Login - Step 01: Navigate to Login page
+[2022-06-24 02:13:09,664] Register - Step 01: Navigate to Register page
+[2022-06-24 02:13:10,248] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-06-24 02:13:10,343] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-06-24 02:13:10,433] Register - Step 04: Enter to email textbox with value is 'afc6781@gmail.vn'
+[2022-06-24 02:13:10,530] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-06-24 02:13:10,618] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-06-24 02:13:10,728] Register - Step 07: Click to Register button
+[2022-06-24 02:13:11,584] Register - Step 08: Verify register success message is displayed
