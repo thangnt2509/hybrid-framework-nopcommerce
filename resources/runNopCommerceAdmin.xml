@@ -13,7 +13,7 @@
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.nopcommerce.user.Level_15_ReportNG_Screenshot" />
+			<class name="com.nopcommerce.user.Level_15_ExtentV3_Screenshot" />
 <!-- 			<class name="com.nopcommerce.user.Level_15_ExtentV2_Screenshot" /> -->
 		</classes>
 	</test>
