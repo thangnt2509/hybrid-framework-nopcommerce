@@ -1,6 +1,6 @@
 package reportConfig;
 
-import java.io.IOException;
+import static reportConfig.ExtentTestManager.getTest;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -9,60 +9,48 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
 import commons.BaseTest;
 
 public class ExtentTestListener extends BaseTest implements ITestListener {
-	private static ExtentReports extent = ExtentManager.createInstance();
-	private static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
-
-	@Override
-	public synchronized void onStart(ITestContext context) {
+	private static String getTestMethodName(ITestResult iTestResult) {
+		return iTestResult.getMethod().getConstructorOrMethod().getName();
 	}
 
 	@Override
-	public synchronized void onFinish(ITestContext context) {
-		extent.flush();
+	public void onStart(ITestContext iTestContext) {
+		iTestContext.setAttribute("WebDriver", this.getDriverInstance());
 	}
 
 	@Override
-	public synchronized void onTestStart(ITestResult result) {
-		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(), result.getMethod().getDescription());
-		test.set(extentTest);
+	public void onFinish(ITestContext iTestContext) {
+		ExtentManager.extentReports.flush();
 	}
 
 	@Override
-	public synchronized void onTestSuccess(ITestResult result) {
-
-		test.get().pass("Test passed");
+	public void onTestStart(ITestResult iTestResult) {
 	}
 
 	@Override
-	public synchronized void onTestFailure(ITestResult result) {
-		Object testClass = result.getInstance();
+	public void onTestSuccess(ITestResult iTestResult) {
+	}
+
+	@Override
+	public void onTestFailure(ITestResult iTestResult) {		
+		Object testClass = iTestResult.getInstance();
 		WebDriver driver = ((BaseTest) testClass).getDriverInstance();
-		String base64Screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-
-		try {
-			test.get().fail(result.getThrowable());
-			test.get().log(Status.FAIL, "Test failed", MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot).build());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
+		String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+		getTest().log(Status.FAIL, "Test Failed", getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
 	}
 
 	@Override
-	public synchronized void onTestSkipped(ITestResult result) {
-		test.get().skip(result.getThrowable());
+	public void onTestSkipped(ITestResult iTestResult) {
+		getTest().log(Status.SKIP, "Test Skipped");
 	}
 
 	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-
+	public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
+		getTest().log(Status.FAIL, "Test Failed with percentage" + getTestMethodName(iTestResult));
 	}
 }

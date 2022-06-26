@@ -1,93 +1,27 @@
 package reportConfig;
 
-import java.io.File;
-
-import org.openqa.selenium.Platform;
-
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import commons.GlobalConstants;
+
 public class ExtentManager {
-	private static ExtentReports extent;
-	private static Platform platform;
-	private static String reportFileName = "ExtentReport.html";
-	private static String macPath = System.getProperty("user.dir") + "/extentV3/";
-	private static String windowsPath = System.getProperty("user.dir") + "\\ExtentReportV3";
-	private static String macReportFileLoc = macPath + "/" + reportFileName;
-	private static String winReportFileLoc = windowsPath + "\\" + reportFileName;
+	public static final ExtentReports extentReports = new ExtentReports();
 
+	public synchronized static ExtentReports createExtentReports() {
+		ExtentSparkReporter reporter = new ExtentSparkReporter(GlobalConstants.PROJECT_PATH + "/extentV5/ExtentReport.html");
+		reporter.config().setReportName("NopCommerce HTML Report");
+		reporter.config().setDocumentTitle("NopCommerce HTML Report");
+		reporter.config().setTimelineEnabled(true);
+		reporter.config().setEncoding("utf-8");
+		reporter.config().setTheme(Theme.DARK);
 
-	public static ExtentReports getInstance() {
-		if (extent == null)
-			createInstance();
-		return extent;
+		extentReports.attachReporter(reporter);
+		extentReports.setSystemInfo("Company", "Automation FC");
+		extentReports.setSystemInfo("Project", "NopCommerce");
+		extentReports.setSystemInfo("Team", "Basus VN");
+		extentReports.setSystemInfo("JDK version", GlobalConstants.JAVA_VERSION);
+		return extentReports;
 	}
-
-	// Create an extent report instance
-	public static ExtentReports createInstance() {
-		platform = getCurrentPlatform();
-		String fileName = getReportFileLocation(platform);
-		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
-		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-		htmlReporter.config().setChartVisibilityOnOpen(true);
-		htmlReporter.config().setTheme(Theme.DARK);
-		htmlReporter.config().setDocumentTitle("NopCommerce HTML Report");
-		htmlReporter.config().setEncoding("utf-8");
-		htmlReporter.config().setReportName("NopCommerce HTML Report");
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
-		return extent;
-	}
-
-	// Select the extent report file location based on platform
-		private static String getReportFileLocation(Platform platform) {
-			String reportFileLocation = null;
-			switch (platform) {
-			case MAC:
-				reportFileLocation = macReportFileLoc;
-				createReportPath(macPath);
-				System.out.println("ExtentReport Path for MAC: " + macPath + "\n");
-				break;
-			case WINDOWS:
-				reportFileLocation = winReportFileLoc;
-				createReportPath(windowsPath);
-				System.out.println("ExtentReport Path for WINDOWS: " + windowsPath + "\n");
-				break;
-			default:
-				System.out.println("ExtentReport path has not been set! There is a problem!\n");
-				break;
-			}
-			return reportFileLocation;
-		}
-
-		// Create the report path if it does not exist
-		private static void createReportPath(String path) {
-			File testDirectory = new File(path);
-			if (!testDirectory.exists()) {
-				if (testDirectory.mkdir()) {
-					System.out.println("Directory: " + path + " is created!");
-				} else {
-					System.out.println("Failed to create directory: " + path);
-				}
-			} else {
-				System.out.println("Directory already exists: " + path);
-			}
-		}
-
-		// Get current platform
-		private static Platform getCurrentPlatform() {
-			if (platform == null) {
-				String operSys = System.getProperty("os.name").toLowerCase();
-				if (operSys.contains("win")) {
-					platform = Platform.WINDOWS;
-				} else if (operSys.contains("nix") || operSys.contains("nux") || operSys.contains("aix")) {
-					platform = Platform.LINUX;
-				} else if (operSys.contains("mac")) {
-					platform = Platform.MAC;
-				}
-			}
-			return platform;
-		}
 }
