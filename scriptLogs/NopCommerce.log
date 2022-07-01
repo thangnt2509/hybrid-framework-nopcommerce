@@ -136,3 +136,19 @@
 [2022-06-24 02:13:10,618] Register - Step 06: Enter to confirm password textbox with value is '123456'
 [2022-06-24 02:13:10,728] Register - Step 07: Click to Register button
 [2022-06-24 02:13:11,584] Register - Step 08: Verify register success message is displayed
+[2022-07-02 00:43:04,879] Login - Step 01: Navigate to Login page
+[2022-07-02 00:43:05,524] Login - Step 01: Enter to email textbox with value is 'afc2653@gmail.vn'
+[2022-07-02 00:43:05,597] Login - Step 02: Enter to password textbox with value is ''
+[2022-07-02 00:43:05,653] Login - Step 03: Click to Login button
+[2022-07-02 01:32:55,981] Pre-condition - Step 01: Navigate to Login page
+[2022-07-02 01:32:56,710] Pre-condition - Step 02: Set cookie and reload page
+[2022-07-02 01:33:01,173] Pre-condition - Step 03: Verify 'My Account' link is displayed
+[2022-07-02 01:33:01,285]  -------------------------- PASSED -------------------------- 
+[2022-07-02 01:35:26,076] Pre-condition - Step 01: Navigate to Login page
+[2022-07-02 01:35:26,701] Pre-condition - Step 02: Set cookie and reload page
+[2022-07-02 01:35:31,121] Pre-condition - Step 03: Verify 'My Account' link is displayed
+[2022-07-02 01:35:31,218]  -------------------------- PASSED -------------------------- 
+[2022-07-02 01:37:16,047] Pre-condition - Step 01: Navigate to Login page
+[2022-07-02 01:37:16,705] Pre-condition - Step 02: Set cookie and reload page
+[2022-07-02 01:37:21,011] Pre-condition - Step 03: Verify 'My Account' link is displayed
+[2022-07-02 01:37:21,118]  -------------------------- PASSED -------------------------- 
