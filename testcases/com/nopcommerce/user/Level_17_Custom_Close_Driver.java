@@ -2,12 +2,11 @@ package com.nopcommerce.user;
 
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.nopcommerce.common.Common_01_Register_End_User;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -16,7 +15,7 @@ import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_16_Share_Data_B extends BaseTest {
+public class Level_17_Custom_Close_Driver extends BaseTest {
 
 
 	@Parameters("browser")
@@ -54,58 +53,38 @@ public class Level_16_Share_Data_B extends BaseTest {
 		registerPage.clickToRegisterButton();
 		
 		log.info("Pre-condition - Step 08: Verify register success message is displayed");
-		verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
+		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed...");
 
 		log.info("Pre-condition - Step 09: Click to Logout link");
 		homePage = registerPage.clickToLogoutLink();
 		
-		log.info("Login - Step 01: Navigate to Login page");
+		log.info("Pre-condition - Step 01: Navigate to Login page");
 		loginPage = homePage.openLoginPage();
 		
-		log.info("Login - Step 01: Enter to email textbox with value is '" + emailAddress + "'" );
+		log.info("Pre-condition - Step 01: Enter to email textbox with value is '" + emailAddress + "'" );
 		loginPage.inputToEmailTextbox(emailAddress);
 		
-		log.info("Login - Step 02: Enter to password textbox with value is '" + validPassword + "'" );
+		log.info("Pre-condition - Step 02: Enter to password textbox with value is '" + validPassword + "'" );
 		loginPage.inputToPasswordTextbox(validPassword);
 		
-		log.info("Login - Step 03: Click to Login button");
+		log.info("Pre-condition - Step 03: Click to Login button");
 		homePage = loginPage.clickToLoginButton();
 	}
 
-
 	@Test
-	public void Search_01_Empty_Data() {
-		
-
-	}
-	@Test
-	public void Search_02_Relative_Product_Name() {
-		
-		
-	}
-	@Test
-	public void Search_03_Absolute_Product_Name() {
-		
-		
-	}
-	@Test
-	public void Search_04_Parent_Category() {
-		
-	}
-	
-	@Test
-	public void Search_05_Incorrect_Manufacturer() {
-		
-	}
-	
-	@Test
-	public void Search_06_Correct_Manufacturer() {
+	public void Search_01_Name() {
 			
 	}
 
-	@AfterClass 
+	@Test
+	public void Search_01_Address() {
+		
+	}
+
+	//Afterclass bị skip khi before class bị fail
+	@AfterClass(alwaysRun = true)
 	public void afterClass() {
-		driver.quit();
+		closeBrowserAndDriver();	
 	}
 	
 	private WebDriver driver;
