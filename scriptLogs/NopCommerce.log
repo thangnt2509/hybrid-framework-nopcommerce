@@ -194,3 +194,296 @@
 [2022-07-02 23:28:35,805] Pre-condition - Step 08: Verify register success message is displayed
 [2022-07-02 23:28:36,049] OS name = windows 10
 [2022-07-02 23:28:36,049] Driver instance name = firefoxdriver: firefox on windows (32e0f568-a041-44c6-8709-e327d0cee30e)
+[2022-07-03 01:43:40,320] Login - Step 01: Navigate to Login page
+[2022-07-03 01:43:40,455] Register - Step 01: Navigate to Register page
+[2022-07-03 01:43:40,455] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 01:43:40,466] OS name = windows 10
+[2022-07-03 01:43:40,467] Driver instance name = firefoxdriver: firefox on windows (b9688b79-91b6-412b-8da9-50c99c0fa365)
+[2022-07-03 01:44:40,839] Login - Step 01: Navigate to Login page
+[2022-07-03 01:44:40,923] Register - Step 01: Navigate to Register page
+[2022-07-03 01:44:40,923] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 01:44:40,930] OS name = windows 10
+[2022-07-03 01:44:40,930] Driver instance name = firefoxdriver: firefox on windows (45e0dedf-a627-4817-a9b4-87f41f4cdadd)
+[2022-07-03 01:46:06,607] Login - Step 01: Navigate to Login page
+[2022-07-03 01:46:06,727] Register - Step 01: Navigate to Register page
+[2022-07-03 01:46:06,727] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 01:46:06,733] OS name = windows 10
+[2022-07-03 01:46:06,733] Driver instance name = firefoxdriver: firefox on windows (d3a8ede1-0030-4903-b1f9-b3313481a56f)
+[2022-07-03 01:48:38,322] Login - Step 01: Navigate to Login page
+[2022-07-03 01:48:38,442] Register - Step 01: Navigate to Register page
+[2022-07-03 01:48:38,442] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 01:48:38,447] OS name = windows 10
+[2022-07-03 01:48:38,447] Driver instance name = firefoxdriver: firefox on windows (b7479e92-f5a3-4d3a-8678-10acbc1db67f)
+[2022-07-03 01:49:39,895] Login - Step 01: Navigate to Login page
+[2022-07-03 01:49:40,007] Register - Step 01: Navigate to Register page
+[2022-07-03 01:49:40,007] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 01:49:40,014] OS name = windows 10
+[2022-07-03 01:49:40,015] Driver instance name = firefoxdriver: firefox on windows (9abb668b-4f78-408f-9596-a85bcea2745d)
+[2022-07-03 01:50:04,870] Login - Step 01: Navigate to Login page
+[2022-07-03 01:50:04,998] Register - Step 01: Navigate to Register page
+[2022-07-03 01:50:04,998] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 01:50:05,004] OS name = windows 10
+[2022-07-03 01:50:05,005] Driver instance name = firefoxdriver: firefox on windows (61ce347d-9adf-42cb-bbca-a95d19f7a93f)
+[2022-07-03 01:54:02,336] Login - Step 01: Navigate to Login page
+[2022-07-03 01:54:02,452] Register - Step 01: Navigate to Register page
+[2022-07-03 01:54:02,452] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 01:54:02,460] OS name = windows 10
+[2022-07-03 01:54:02,460] Driver instance name = firefoxdriver: firefox on windows (212774cf-aa5d-49c8-a797-9374cdfc8788)
+[2022-07-03 01:54:45,531] Register - Step 01: Navigate to Register page
+[2022-07-03 01:54:45,532] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 01:54:45,654] OS name = windows 10
+[2022-07-03 01:54:45,655] Driver instance name = firefoxdriver: firefox on windows (ae92dc46-4053-4d1d-b938-d709b93687e6)
+[2022-07-03 01:56:23,598] OS name = windows 10
+[2022-07-03 01:56:23,599] Driver instance name = firefoxdriver: firefox on windows (d7b4960e-26c9-4149-9300-9eda1dfb5593)
+[2022-07-03 01:57:25,877] Register - Step 01: Navigate to Register page
+[2022-07-03 01:57:26,598] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 01:57:26,736] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 01:57:26,865] Register - Step 04: Enter to email textbox with value is 'afc5534@gmail.vn'
+[2022-07-03 01:57:26,992] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 01:57:27,089] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 01:57:27,185] Register - Step 07: Click to Register button
+[2022-07-03 01:57:37,361] OS name = windows 10
+[2022-07-03 01:57:37,361] Driver instance name = firefoxdriver: firefox on windows (f342898c-7115-443b-9797-37cad4098306)
+[2022-07-03 02:01:12,241] Register - Step 01: Navigate to Register page
+[2022-07-03 02:01:12,873] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 02:01:12,985] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 02:01:13,090] Register - Step 04: Enter to email textbox with value is 'afc2344@gmail.vn'
+[2022-07-03 02:01:13,223] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 02:01:13,356] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 02:01:13,458] Register - Step 07: Click to Register button
+[2022-07-03 02:01:23,573] OS name = windows 10
+[2022-07-03 02:01:23,573] Driver instance name = firefoxdriver: firefox on windows (7a12c9e7-6b12-4e52-b706-17a1400df71b)
+[2022-07-03 02:02:48,371] Register - Step 01: Navigate to Register page
+[2022-07-03 02:02:49,021] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 02:02:49,147] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 02:02:49,241] Register - Step 04: Enter to email textbox with value is 'afc9956@gmail.vn'
+[2022-07-03 02:02:49,370] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 02:02:49,466] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 02:02:49,571] Register - Step 07: Click to Register button
+[2022-07-03 02:02:59,676] OS name = windows 10
+[2022-07-03 02:02:59,676] Driver instance name = firefoxdriver: firefox on windows (0bd35fa3-04d3-4cda-80a1-f3de0c20fbcf)
+[2022-07-03 02:03:55,353] Register - Step 01: Navigate to Register page
+[2022-07-03 02:03:56,011] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 02:03:56,162] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 02:03:56,277] Register - Step 04: Enter to email textbox with value is 'afc1634@gmail.vn'
+[2022-07-03 02:03:56,394] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 02:03:56,524] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 02:03:56,633] Register - Step 07: Click to Register button
+[2022-07-03 02:04:10,776] OS name = windows 10
+[2022-07-03 02:04:10,776] Driver instance name = firefoxdriver: firefox on windows (653d830c-bf23-4306-9b72-1a40da714f14)
+[2022-07-03 02:04:11,016] Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'HUNGPHAM-T480', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220623063721, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 25192, moz:profile: C:\Users\T480\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 653d830c-bf23-4306-9b72-1a40da714f14
+[2022-07-03 02:04:51,999] Register - Step 01: Navigate to Register page
+[2022-07-03 02:04:52,709] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 02:04:52,832] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 02:04:52,956] Register - Step 04: Enter to email textbox with value is 'afc7732@gmail.vn'
+[2022-07-03 02:04:53,086] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 02:04:53,210] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 02:04:53,309] Register - Step 07: Click to Register button
+[2022-07-03 02:05:02,196] OS name = windows 10
+[2022-07-03 02:05:02,197] Driver instance name = firefoxdriver: firefox on windows (979f25a1-d6a5-4c4a-863c-a840b120750d)
+[2022-07-03 02:05:02,412] Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'HUNGPHAM-T480', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220623063721, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 18628, moz:profile: C:\Users\T480\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 979f25a1-d6a5-4c4a-863c-a840b120750d
+[2022-07-03 02:05:52,931] Register - Step 01: Navigate to Register page
+[2022-07-03 02:06:00,542] OS name = windows 10
+[2022-07-03 02:06:00,542] Driver instance name = firefoxdriver: firefox on windows (294b8a29-c200-4903-9e70-bd042a579674)
+[2022-07-03 02:06:00,703] Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'HUNGPHAM-T480', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220623063721, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 11716, moz:profile: C:\Users\T480\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 294b8a29-c200-4903-9e70-bd042a579674
+[2022-07-03 02:06:34,516] Register - Step 01: Navigate to Register page
+[2022-07-03 02:06:40,630] OS name = windows 10
+[2022-07-03 02:06:40,631] Driver instance name = firefoxdriver: firefox on windows (1edabf8b-16d7-41bf-a691-63170dbd26b3)
+[2022-07-03 02:06:40,773] Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'HUNGPHAM-T480', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220623063721, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 25044, moz:profile: C:\Users\T480\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1edabf8b-16d7-41bf-a691-63170dbd26b3
+[2022-07-03 02:07:00,649] Register - Step 01: Navigate to Register page
+[2022-07-03 02:07:03,597] OS name = windows 10
+[2022-07-03 02:07:03,598] Driver instance name = firefoxdriver: firefox on windows (b8d29d33-d748-4118-95ef-6be6f344a03c)
+[2022-07-03 02:07:03,743] Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'HUNGPHAM-T480', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220623063721, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 10072, moz:profile: C:\Users\T480\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b8d29d33-d748-4118-95ef-6be6f344a03c
+[2022-07-03 02:07:56,853] Register - Step 01: Navigate to Register page
+[2022-07-03 02:07:57,534] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 02:07:57,655] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 02:07:57,761] Register - Step 04: Enter to email textbox with value is 'afc9642@gmail.vn'
+[2022-07-03 02:07:57,877] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 02:07:57,983] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 02:07:58,072] Register - Step 07: Click to Register button
+[2022-07-03 02:08:00,818] OS name = windows 10
+[2022-07-03 02:08:00,818] Driver instance name = firefoxdriver: firefox on windows (fbfa56e0-bdc4-4efd-a67f-9f57e98e7667)
+[2022-07-03 02:08:01,000] Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'HUNGPHAM-T480', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220623063721, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 19364, moz:profile: C:\Users\T480\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fbfa56e0-bdc4-4efd-a67f-9f57e98e7667
+[2022-07-03 02:12:37,670] Login - Step 01: Navigate to Login page
+[2022-07-03 02:12:37,797] Register - Step 01: Navigate to Register page
+[2022-07-03 02:12:38,477] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 02:12:38,613] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 02:12:38,700] Register - Step 04: Enter to email textbox with value is 'afc1481@gmail.vn'
+[2022-07-03 02:12:38,798] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 02:12:38,883] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 02:12:38,959] Register - Step 07: Click to Register button
+[2022-07-03 02:12:39,933] Register - Step 08: Verify register success message is displayed
+[2022-07-03 02:12:40,003] OS name = windows 10
+[2022-07-03 02:12:40,003] Driver instance name = firefoxdriver: firefox on windows (1a7a1bf0-e00e-458e-829c-df8e395ac783)
+[2022-07-03 13:58:50,345] Login - Step 01: Navigate to Login page
+[2022-07-03 13:58:50,446] Register - Step 01: Navigate to Register page
+[2022-07-03 13:58:51,091] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 13:58:51,197] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 13:58:51,286] Register - Step 04: Enter to email textbox with value is 'afc3873@gmail.vn'
+[2022-07-03 13:58:51,405] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 13:58:51,501] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 13:58:51,599] Register - Step 07: Click to Register button
+[2022-07-03 13:58:52,661] Register - Step 08: Verify register success message is displayed
+[2022-07-03 13:58:52,740] OS name = windows 10
+[2022-07-03 13:58:52,741] Driver instance name = firefoxdriver: firefox on windows (0b90f3fd-45e8-48cf-a682-2e750e0345ed)
+[2022-07-03 14:00:47,357] Login - Step 01: Navigate to Login page
+[2022-07-03 14:02:26,430] Register - Step 01: Navigate to Register page
+[2022-07-03 14:02:27,100] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 14:02:27,191] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 14:02:27,278] Register - Step 04: Enter to email textbox with value is 'afc6247@gmail.vn'
+[2022-07-03 14:02:27,363] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 14:02:27,449] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 14:02:27,525] Register - Step 07: Click to Register button
+[2022-07-03 14:02:28,431] Register - Step 08: Verify register success message is displayed
+[2022-07-03 14:02:28,511] OS name = windows 10
+[2022-07-03 14:02:28,511] Driver instance name = firefoxdriver: firefox on windows (981871d2-dd30-482d-9512-5c75e11de89e)
+[2022-07-03 14:03:32,941] Login - Step 01: Navigate to Login page
+[2022-07-03 14:03:33,050] Register - Step 01: Navigate to Register page
+[2022-07-03 14:03:33,711] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 14:03:33,862] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 14:03:33,982] Register - Step 04: Enter to email textbox with value is 'afc345@gmail.vn'
+[2022-07-03 14:03:34,095] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 14:03:34,191] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 14:03:34,279] Register - Step 07: Click to Register button
+[2022-07-03 14:03:35,315] Register - Step 08: Verify register success message is displayed
+[2022-07-03 14:03:35,381] OS name = windows 10
+[2022-07-03 14:03:35,382] Driver instance name = firefoxdriver: firefox on windows (f2850143-e2ce-40d9-a68d-b71e38449018)
+[2022-07-03 14:06:48,017] Login - Step 01: Navigate to Login page
+[2022-07-03 14:06:57,643] Register - Step 01: Navigate to Register page
+[2022-07-03 14:06:58,378] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 14:06:58,510] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 14:06:58,606] Register - Step 04: Enter to email textbox with value is 'afc6717@gmail.vn'
+[2022-07-03 14:06:58,726] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 14:06:58,825] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 14:06:58,904] Register - Step 07: Click to Register button
+[2022-07-03 14:06:59,808] Register - Step 08: Verify register success message is displayed
+[2022-07-03 14:06:59,899] OS name = windows 10
+[2022-07-03 14:06:59,899] Driver instance name = firefoxdriver: firefox on windows (786d1fae-66a3-4db5-92bb-76dd33723083)
+[2022-07-03 14:08:06,929] OS name = windows 10
+[2022-07-03 14:08:06,930] 
+[2022-07-03 14:08:29,402] Login - Step 01: Navigate to Login page
+[2022-07-03 14:09:13,702] Register - Step 01: Navigate to Register page
+[2022-07-03 14:09:21,569] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 14:09:22,655] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 14:09:23,715] Register - Step 04: Enter to email textbox with value is 'afc9926@gmail.vn'
+[2022-07-03 14:09:24,814] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 14:09:26,348] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 14:09:27,256] Register - Step 07: Click to Register button
+[2022-07-03 14:09:29,204] Register - Step 08: Verify register success message is displayed
+[2022-07-03 14:09:30,399] OS name = windows 10
+[2022-07-03 14:09:30,400] Driver instance name = firefoxdriver: firefox on windows (21ca3967-7556-434e-866e-79ae0549dcaf)
+[2022-07-03 14:09:53,773] Login - Step 01: Navigate to Login page
+[2022-07-03 14:10:35,361] Login - Step 01: Navigate to Login page
+[2022-07-03 14:12:39,914] Register - Step 01: Navigate to Register page
+[2022-07-03 14:12:40,740] Login - Step 01: Navigate to Login page
+[2022-07-03 14:12:48,831] Register - Step 01: Navigate to Register page
+[2022-07-03 14:12:49,178] OS name = windows 10
+[2022-07-03 14:12:49,179] Driver instance name = firefoxdriver: firefox on windows (b309f898-769c-4146-9876-f2d6992268ae)
+[2022-07-03 14:12:49,191] Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'HUNGPHAM-T480', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220623063721, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 23708, moz:profile: C:\Users\T480\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b309f898-769c-4146-9876-f2d6992268ae
+[2022-07-03 14:14:49,403] Login - Step 01: Navigate to Login page
+[2022-07-03 14:16:12,028] Login - Step 01: Navigate to Login page
+[2022-07-03 14:17:39,995] Register - Step 01: Navigate to Register page
+[2022-07-03 14:17:40,734] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 14:17:40,885] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 14:17:41,028] Register - Step 04: Enter to email textbox with value is 'afc3502@gmail.vn'
+[2022-07-03 14:17:41,173] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 14:17:41,296] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 14:17:41,414] Register - Step 07: Click to Register button
+[2022-07-03 14:17:42,354] Register - Step 08: Verify register success message is displayed
+[2022-07-03 14:17:42,526] Login - Step 01: Navigate to Login page
+[2022-07-03 14:17:43,896] Login - Step 01: Enter to email textbox with value is 'afc3502@gmail.vn'
+[2022-07-03 14:17:44,021] Login - Step 02: Enter to password textbox with value is '123456'
+[2022-07-03 14:17:44,135] Login - Step 03: Click to Login button
+[2022-07-03 14:17:44,907] Login - Step 04: Verify 'My Account' link is displayed
+[2022-07-03 14:17:45,010] OS name = windows 10
+[2022-07-03 14:17:45,010] Driver instance name = firefoxdriver: firefox on windows (a5831d54-e1a4-4b2e-be63-c4b3503b9ab4)
+[2022-07-03 14:59:23,981] Register - Step 01: Navigate to Register page
+[2022-07-03 14:59:25,099] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 14:59:25,220] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 14:59:26,340] Register - Step 04: Enter to email textbox with value is 'afc4952@gmail.vn'
+[2022-07-03 14:59:26,547] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 14:59:31,660] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 14:59:31,885] Register - Step 07: Click to Register button
+[2022-07-03 14:59:32,949] Register - Step 08: Verify register success message is displayed
+[2022-07-03 14:59:33,195] Login - Step 01: Navigate to Login page
+[2022-07-03 14:59:35,139] Login - Step 01: Enter to email textbox with value is 'afc4952@gmail.vn'
+[2022-07-03 14:59:35,276] Login - Step 02: Enter to password textbox with value is '123456'
+[2022-07-03 14:59:35,382] Login - Step 03: Click to Login button
+[2022-07-03 14:59:36,292] Login - Step 04: Verify 'My Account' link is displayed
+[2022-07-03 14:59:36,429] OS name = windows 10
+[2022-07-03 14:59:36,429] Driver instance name = firefoxdriver: firefox on windows (4e86c532-7dd1-4b1d-a49e-64aff0326d02)
+[2022-07-03 15:20:46,726] Register - Step 01: Navigate to Register page
+[2022-07-03 15:20:47,855] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 15:20:47,990] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 15:20:49,126] Register - Step 04: Enter to email textbox with value is 'afc8484@gmail.vn'
+[2022-07-03 15:20:49,366] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 15:20:49,478] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 15:20:49,577] Register - Step 07: Click to Register button
+[2022-07-03 15:20:50,721] Register - Step 08: Verify register success message is displayed
+[2022-07-03 15:20:50,907] Login - Step 01: Navigate to Login page
+[2022-07-03 15:20:52,407] Login - Step 01: Enter to email textbox with value is 'afc8484@gmail.vn'
+[2022-07-03 15:20:52,529] Login - Step 02: Enter to password textbox with value is '123456'
+[2022-07-03 15:20:52,643] Login - Step 03: Click to Login button
+[2022-07-03 15:20:53,491] Login - Step 04: Verify 'My Account' link is displayed
+[2022-07-03 15:20:53,611] My Account - Step 01: Navigate to My Account page
+[2022-07-03 15:20:54,272] My Account - Step 02: Verify 'Customer Infor' page is displayed
+[2022-07-03 15:20:54,368] My Account - Step 03: Verify 'First Name' value is correctly
+[2022-07-03 15:20:54,426] My Account - Step 03: Verify 'Last Name' value is correctly
+[2022-07-03 15:20:54,517] My Account - Step 03: Verify 'Email' value is correctly
+[2022-07-03 15:20:54,601] OS name = windows 10
+[2022-07-03 15:20:54,601] Driver instance name = firefoxdriver: firefox on windows (ac2dc3bf-9863-4071-a7c8-7874ccb75b2e)
+[2022-07-03 15:21:25,271] Register - Step 01: Navigate to Register page
+[2022-07-03 15:21:26,394] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-07-03 15:21:26,500] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-07-03 15:21:27,618] Register - Step 04: Enter to email textbox with value is 'afc9344@gmail.vn'
+[2022-07-03 15:21:27,778] Register - Step 05: Enter to password textbox with value is '123456'
+[2022-07-03 15:21:27,877] Register - Step 06: Enter to confirm password textbox with value is '123456'
+[2022-07-03 15:21:27,978] Register - Step 07: Click to Register button
+[2022-07-03 15:21:28,892] Register - Step 08: Verify register success message is displayed
+[2022-07-03 15:21:29,090] Login - Step 01: Navigate to Login page
+[2022-07-03 15:21:30,508] Login - Step 01: Enter to email textbox with value is 'afc9344@gmail.vn'
+[2022-07-03 15:21:30,632] Login - Step 02: Enter to password textbox with value is '123456'
+[2022-07-03 15:21:30,746] Login - Step 03: Click to Login button
+[2022-07-03 15:21:31,564] Login - Step 04: Verify 'My Account' link is displayed
+[2022-07-03 15:21:31,680] My Account - Step 01: Navigate to My Account page
+[2022-07-03 15:21:32,280] My Account - Step 02: Verify 'Customer Infor' page is displayed
+[2022-07-03 15:21:32,360] My Account - Step 03: Verify 'First Name' value is correctly
+[2022-07-03 15:21:32,429] My Account - Step 03: Verify 'Last Name' value is correctly
+[2022-07-03 15:21:32,495] My Account - Step 03: Verify 'Email' value is correctly
+[2022-07-03 15:21:32,561] OS name = windows 10
+[2022-07-03 15:21:32,561] Driver instance name = firefoxdriver: firefox on windows (bc254f6e-bd2b-4718-a517-da13ca8f06d8)

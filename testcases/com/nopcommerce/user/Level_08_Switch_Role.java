@@ -28,7 +28,7 @@ public class Level_08_Switch_Role extends BaseTest {
 	@BeforeClass // Multiple browsers
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		driver.get(GlobalConstants.USER_PAGE_URL);
+		driver.get(GlobalConstants.PORTAL_DEV_URL);
 
 		userHomePage = PageGeneratorManager.getUserHomePage(driver);
 		
@@ -68,7 +68,7 @@ public class Level_08_Switch_Role extends BaseTest {
 	@Test
 	public void Role_02_Admin_To_User() {
 		//Login Page (Admin) -> Open User URL -> Home page (User)
-		adminLoginPage.openPageUrl(driver, GlobalConstants.USER_PAGE_URL);
+		adminLoginPage.openPageUrl(driver, GlobalConstants.PORTAL_DEV_URL);
 		userHomePage = PageGeneratorManager.getUserHomePage(driver);
 		
 		//Home Page -> Login Page (User)

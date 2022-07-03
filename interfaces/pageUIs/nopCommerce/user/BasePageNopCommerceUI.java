@@ -18,4 +18,12 @@ public class BasePageNopCommerceUI {
 	public static final String LOGOUT_LINK_AT_USER = "css=a[class='ico-logout']";
 	public static final String LOGOUT_LINK_AT_ADMIN = "xpath=//a[text()='Logout']";
 	public static final String AJAX_BUSY = "xpath=//div[@id='ajaxBusy']";
+	
+	public static final String DYNAMIC_TEXTBOX_BY_ID = "xpath=//input[@id='%s']";
+	public static final String DYNAMIC_BUTTON_BY_TEXT = "xpath=//button[text()='%s']";
+	public static final String DYNAMIC_DROPDOWN_BY_NAME = "xpath=//select[@name='%s']";
+	public static final String DYNAMIC_RADIO_BY_LABEL = "xpath=//label[text()='%s']/preceding-sibling::input";
+	public static final String DYNAMIC_CHECKBOX_BY_LABEL = "xpath=//label[contains(text(), '%s')]/following-sibling::input";
+	
+	public static final String DYNAMIC_TEXT_BOX_ATTRIBUTE_VALUE_BY_ID = "xpath=//input[@id='%s']";
 }
