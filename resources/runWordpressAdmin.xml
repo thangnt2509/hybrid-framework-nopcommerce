@@ -11,8 +11,8 @@
 		<listener class-name = "org.uncommons.reportng.JUnitXMLReporter"/>
 	</listeners>
 
-	<parameter name="urlAdmin" value="https://thangnt.auto/wp-login.php"/>
-	<parameter name="urlUser" value="https://thangnt.auto/"/>
+	<parameter name="urlAdmin" value="http://thangnt/thangnt/wp-login.php"/>
+	<parameter name="endUserUrl" value="http://thangnt/thangnt/"/>
 
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />

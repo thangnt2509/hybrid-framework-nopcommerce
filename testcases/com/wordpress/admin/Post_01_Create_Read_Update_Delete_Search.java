@@ -3,6 +3,7 @@ package com.wordpress.admin;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -45,20 +46,20 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		adminLoginPage.enterToPasswordTextbox(adminPassword);
 		
 		log.info("Pre-Condition - Step 04: Click to Login button");
-		adminLoginPage.clickToLoginButton();
+		adminDashboardPage = adminLoginPage.clickToLoginButton();
 			
 	}
 
 	@Test
 	public void Post_01_Create_New_Post() {
 		log.info("Create_Post - Step 01: Click to 'Posts' menu link");
-		adminDashboardPage.clickToPostMenuLink();
+		adminPostSearchPage = adminDashboardPage.clickToPostMenuLink();
 			
 		log.info("Create_Post - Step 02: Get 'Search Posts' page Url");
 		searchPostUrl = adminPostSearchPage.getPageUrl(driver);
 		
 		log.info("Create_Post - Step 03: Click to 'Add New' button");
-		adminPostSearchPage.clickToAddNewButton();	
+		adminPostAddNewPage = adminPostSearchPage.clickToAddNewButton();	
 			
 		log.info("Create_Post - Step 04: Enter to post title");
 		adminPostAddNewPage.enterToAddNewPostTitle(postTitle);
@@ -114,11 +115,11 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	}
 
 
-	@Test
+//	@Test
 	public void Post_03_Edit_Post() {	
 		
 	}
-	@Test
+//	@Test
 	public void Post_04_Delete_Post() {	
 		
 	}
