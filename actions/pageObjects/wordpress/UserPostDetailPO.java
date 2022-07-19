@@ -37,4 +37,6 @@ public class UserPostDetailPO extends BasePage {
 		clickToElement(driver, UserPostDetailPageUI.POST_TITLE_TEXT, postTitle);
 		return PageGeneratorManager.getUserPostDetailPage(driver);
 	}
+
+
 }
