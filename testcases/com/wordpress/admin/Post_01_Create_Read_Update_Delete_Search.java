@@ -3,7 +3,6 @@ package com.wordpress.admin;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -116,7 +115,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		verifyTrue(userPostDetailPage.isPostInforDisplayedWithPostCurrentDate(postTitle, currentDate));
 	}
 
-	// @Test
+//	 @Test
 	public void Post_03_Edit_Post() {
 		log.info("Edit_Post - Step 01: Open Admin site");
 		adminDashboardPage = userPostDetailPage.openAdminSite(driver, this.adminUrl);
@@ -181,7 +180,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 
 	}
 
-	// @Test
+//	 @Test
 	public void Post_04_Delete_Post() {
 		log.info("Delete_Post - Step 01: Open Admin site");
 		adminDashboardPage = userPostDetailPage.openAdminSite(driver, this.adminUrl);
@@ -196,40 +195,40 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		adminPostSearchPage.clickToSearchPageButton();
 
 		log.info("Delete_Post - Step 05: Select Post detail checkbox");
-		// adminPostSearchPage.selectPostCheckboxByTitle(editPostTitle);
-		//
-		// log.info("Delete_Post - Step 06: Select 'Move to Trash' item in dropdown");
-		// adminPostSearchPage.selectItemInActionDropdown("Move to Trash");
-		//
-		// log.info("Delete_Post - Step 07: Click to 'Apply' button");
-		// adminPostSearchPage.clickToApplyButton();
-		//
-		// log.info("Delete_Post - Step 08: Verify '1 post moved to the Trash.' message is displayed");
-		// verifyTrue(adminPostSearchPage.isMoveToTrashMessageDisplayed("1 post moved to the Trash."));
-		//
-		// log.info("Delete_Post - Step 09: Enter to Search textbox");
-		// adminPostSearchPage.enterToSearchTextbox(editPostTitle);
-		//
-		// log.info("Delete_Post - Step 10: Click to 'Search Posts' button");
-		// adminPostSearchPage.clickToSearchPageButton();
-		//
-		// log.info("Delete_Post - Step 11: Verify 'No posts found.' message is displayed");
-		// verifyTrue(adminPostSearchPage.isNoPostFoundMessageDisplayed("No posts found."));
-		//
-		// log.info("Delete_Post - Step 12: Open End User site");
-		// userHomePage = adminPostSearchPage.openEndUserSite(driver, this.endUserUrl);
-		//
-		// log.info("Delete_Post - Step 13: Verify Post title undisplayed");
-		// verifyTrue(userHomePage.isPostInforUndisplayedWithPostTitle(editPostTitle));
-		//
-		// log.info("Delete_Post - Step 14: Enter to Search textbox");
-		// userHomePage.enterToSearchTextbox(editPostTitle);
-		//
-		// log.info("Delete_Post - Step 15: Click to 'Search Posts' button");
-		// userSearchPostPage = userHomePage.clickToSearchButton();
-		//
-		// log.info("Delete_Post - Step 11: Verify 'Nothing Found' message is displayed");
-		// verifyTrue(userSearchPostPage.isNothingFoundMessageDisplayed("Nothing Found"));
+		 adminPostSearchPage.selectPostCheckboxByTitle(editPostTitle);
+		
+		 log.info("Delete_Post - Step 06: Select 'Move to Trash' item in dropdown");
+		 adminPostSearchPage.selectItemInActionDropdown("Move to Trash");
+		
+		 log.info("Delete_Post - Step 07: Click to 'Apply' button");
+		 adminPostSearchPage.clickToApplyButton();
+		
+		 log.info("Delete_Post - Step 08: Verify '1 post moved to the Trash.' message is displayed");
+		 verifyTrue(adminPostSearchPage.isMoveToTrashMessageDisplayed("1 post moved to the Trash."));
+		
+		 log.info("Delete_Post - Step 09: Enter to Search textbox");
+		 adminPostSearchPage.enterToSearchTextbox(editPostTitle);
+		
+		 log.info("Delete_Post - Step 10: Click to 'Search Posts' button");
+		 adminPostSearchPage.clickToSearchPageButton();
+		
+		 log.info("Delete_Post - Step 11: Verify 'No posts found.' message is displayed");
+		 verifyTrue(adminPostSearchPage.isNoPostFoundMessageDisplayed("No posts found."));
+		
+		 log.info("Delete_Post - Step 12: Open End User site");
+		 userHomePage = adminPostSearchPage.openEndUserSite(driver, this.endUserUrl);
+		
+		 log.info("Delete_Post - Step 13: Verify Post title undisplayed");
+		 verifyTrue(userHomePage.isPostInforUndisplayedWithPostTitle(editPostTitle));
+		
+		 log.info("Delete_Post - Step 14: Enter to Search textbox");
+		 userHomePage.enterToSearchTextbox(editPostTitle);
+		
+		 log.info("Delete_Post - Step 15: Click to 'Search Posts' button");
+		 userSearchPostPage = userHomePage.clickToSearchButton();
+		
+		 log.info("Delete_Post - Step 11: Verify 'Nothing Found' message is displayed");
+		 verifyTrue(userSearchPostPage.isNothingFoundMessageDisplayed("Nothing Found"));
 	}
 
 	@AfterClass(alwaysRun = true)

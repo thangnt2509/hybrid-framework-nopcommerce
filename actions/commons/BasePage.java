@@ -514,11 +514,11 @@ public class BasePage {
 	}
 	
 	//Case 2 + 3
-	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+	public boolean isElementUndisplayed(WebDriver driver, String locatorType) {
 //		System.out.println("Start time = " + new Date().toString());
 		
 		overrideImplicitTimeout(driver, shortTimeout);
-		List<WebElement> elements = getListElements(driver, locator);
+		List<WebElement> elements = getListElements(driver, locatorType);
 		
 		//Sau khi tìm xong thì gán lại wait = 30 để các step khác (findElement/ findElements) không bị ảnh hưởng
 		overrideImplicitTimeout(driver, longTimeout);
@@ -535,6 +535,20 @@ public class BasePage {
 			return true;
 		}else{
 //			System.out.println("Case 1 - Element in DOM and visible");
+			return false;
+		}
+	}
+	public boolean isElementUndisplayed(WebDriver driver, String locatorType, String... dynamicValues) {
+		overrideImplicitTimeout(driver, shortTimeout);
+		List<WebElement> elements = getListElements(driver, getDynacmicXpath(locatorType, dynamicValues));
+		
+		overrideImplicitTimeout(driver, longTimeout);
+		
+		if (elements.size() == 0) {
+			return true;
+		}else if(elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			return true;
+		}else{
 			return false;
 		}
 	}
