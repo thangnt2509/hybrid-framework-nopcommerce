@@ -20,10 +20,9 @@ public class Level_18_Pattern_Object extends BaseTest {
 	@BeforeClass // Multiple browsers
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		driver.get("https://demo.nopcommerce.com/");
-
 		homePage = PageGeneratorManager.getUserHomePage(driver);
-
+		showBrowserConsoleLogs(driver);
+		
 		firstName = "Automation";
 		lastName = "FC";
 		emailAddress = "afc" + generateFakeNumber() + "@gmail.vn";
@@ -37,6 +36,7 @@ public class Level_18_Pattern_Object extends BaseTest {
 	public void User_01_Register() {
 		log.info("Register - Step 01: Navigate to Register page");
 		registerPage = homePage.openRegisterPage();
+		showBrowserConsoleLogs(driver);
 		
 		registerPage.clickToRadioButtonByLabel(driver, "Female");
 		
@@ -65,6 +65,7 @@ public class Level_18_Pattern_Object extends BaseTest {
 		
 		log.info("Register - Step 07: Click to Register button");
 		registerPage.clickToButtonByText(driver, "Register");
+		showBrowserConsoleLogs(driver);
 
 		log.info("Register - Step 08: Verify register success message is displayed");
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
@@ -77,7 +78,8 @@ public class Level_18_Pattern_Object extends BaseTest {
 		// log.info("Register - Step 09: Click to Logout link");
 		homePage = registerPage.clickToLogoutLink();
 		loginPage = homePage.openLoginPage();
-
+		showBrowserConsoleLogs(driver);
+		
 		log.info("Login - Step 01: Enter to email textbox with value is '" + emailAddress + "'");
 		loginPage.inputToTextboxByID(driver, "Email", emailAddress);
 		
@@ -87,6 +89,7 @@ public class Level_18_Pattern_Object extends BaseTest {
 		log.info("Login - Step 03: Click to Login button");
 		loginPage.clickToButtonByText(driver, "Log in");
 		homePage = PageGeneratorManager.getUserHomePage(driver);
+		showBrowserConsoleLogs(driver);
 
 		log.info("Login - Step 04: Verify 'My Account' link is displayed");
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());

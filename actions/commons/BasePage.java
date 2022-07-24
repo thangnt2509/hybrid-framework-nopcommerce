@@ -1,7 +1,6 @@
 package commons;
 
-import java.util.Date;
-import java.util.Iterator;
+
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -15,7 +14,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.internal.FindsByClassName;
+
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -31,7 +30,6 @@ import pageObjects.nopCommerce.user.UserRewardPointPageObject;
 import pageObjects.wordpress.AdminDashboardPO;
 import pageObjects.wordpress.UserHomePO;
 import pageUI.jQuery.uploadFiles.BasePageJQueryUI;
-import pageUI.jQuery.uploadFiles.HomePageUI;
 import pageUIs.nopCommerce.user.BasePageNopCommerceUI;
 
 //Common class
